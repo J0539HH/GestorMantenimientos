@@ -88,6 +88,10 @@ $(document).ready(function () {
     $("#modalNewUser").modal("show");
   });
 
+  $("#forgetPass").on("click", function () {
+    $("#modalForget").modal("show");
+  });
+
   $("#btnRegistrar").on("click", function () {
     ValidarNuevoUsuario();
   });
@@ -430,7 +434,11 @@ function CerrarAlerta() {
 function IniciarSession(idusuario, idrol, nombre) {
   fetch("/api/sesion", {
     method: "POST",
-    body: JSON.stringify({ idusuario: idusuario, idrol: idrol, nombre: nombre }),
+    body: JSON.stringify({
+      idusuario: idusuario,
+      idrol: idrol,
+      nombre: nombre,
+    }),
     headers: {
       "Content-Type": "application/json",
     },

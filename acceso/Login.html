@@ -56,14 +56,12 @@
                         <div class="d-flex justify-content-center"
                             style="margin-bottom: 10px;"> <img
                                 src="../Multimedia/logoDocu.svg"
-                                height="40px;"
-                                />
+                                height="40px;" />
                         </div>
                         <div class="form-group">
                             <label class="labelNameInput" for="usuario">Usuario</label>
-                            <input placeholder="" type="text"
-                                class="form-control" id="usuario" name="usuario"
-                                />
+                            <input placeholder type="text"
+                                class="form-control" id="usuario" name="usuario" />
                             <span class="spanHelperErrorInput">El usuario es
                                 obligatorio</span>
                         </div>
@@ -73,7 +71,7 @@
                         col-xs-12">
                         <div class="form-group">
                             <label class="labelNameInput" for="password">Contraseña</label>
-                            <input placeholder="" type="password"
+                            <input placeholder type="password"
                                 class="form-control passwordInfo" id="password"
                                 name="password" />
                             <span class="spanHelperErrorInput">La contraseña es
@@ -91,10 +89,16 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
                         col-xs-12">
                         <div class="contHelpers">
-                            <p class="pTxtMsg hidden">Usuario o contraseña
-                                incorrectos</p>
                             <p id="newCliente"
-                                class="pTxtOlvidoContraseña">Nuevo cliente!</p>
+                                class="pTxtOlvidoContraseña">¡Registrate!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
+                        col-xs-12 mt-2">
+                        <div class="contHelpers">
+                            <p id="forgetPass"
+                                class="pTxtOlvidoContraseña">¿Olvidaste tu
+                                contraseña?</p>
                         </div>
                     </div>
                 </section>
@@ -106,9 +110,9 @@
             aria-hidden="true">
             <div class="modal-dialog dialogCambiarPass">
                 <section class="modal-content content-CambiarContra">
-                    <P class="tituloRestablecerContraseña text-center">Nuevo
+                    <p class="tituloRestablecerContraseña text-center">Nuevo
                         cliente del
-                        sistema</P>
+                        sistema</p>
                     <p class="InfoCambiarPass infoCambiarPass0">Al terminar, te
                         enviaremos la información del inicio de sesión por
                         correo electronico.</p>
@@ -120,15 +124,13 @@
                             <img
                                 src="../Multimedia/Registration.png"
                                 height="50px;"
-                                style="margin-right: 10px; margin-left: 42%;"
-                                />
+                                style="margin-right: 10px; margin-left: 42%;" />
                             <div class="form-group">
                                 <label class="labelNameInput" for="newUser">Nuevo
                                     usuario</label>
-                                <input placeholder="" type="text"
+                                <input placeholder type="text"
                                     class="form-control" id="newUser"
-                                    name="newUser"
-                                    />
+                                    name="newUser" />
                             </div>
                         </div>
 
@@ -137,7 +139,7 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newPassword">Nueva
                                     contraseña</label>
-                                <input placeholder="" type="password"
+                                <input placeholder type="password"
                                     class="form-control passwordInfo"
                                     id="newPassword"
                                     name="newPassword" />
@@ -150,7 +152,7 @@
                                 <label class="labelNameInput"
                                     for="newPassword2">Repetir
                                     contraseña</label>
-                                <input placeholder="" type="password"
+                                <input placeholder type="password"
                                     class="form-control passwordInfo"
                                     id="newPassword2"
                                     name="newPassword2" />
@@ -162,10 +164,9 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newCorreo">Correo
                                     electronico</label>
-                                <input placeholder="" type="text"
+                                <input placeholder type="text"
                                     class="form-control" id="newCorreo"
-                                    name="newCorreo"
-                                    />
+                                    name="newCorreo" />
                             </div>
                         </div>
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
@@ -173,10 +174,9 @@
                             <div class="form-group">
                                 <label class="labelNameInput" for="newName">Nombre
                                     completo</label>
-                                <input placeholder="" type="text"
+                                <input placeholder type="text"
                                     class="form-control" id="newName"
-                                    name="newName"
-                                    />
+                                    name="newName" />
                             </div>
                         </div>
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
@@ -186,14 +186,50 @@
                         </div>
                     </section>
 
+                </section>
+            </div>
+        </div>
+
+        <!-- Modal olvido de contraseña -->
+        <div class="modal notificationModal fade" id="modalForget"
+            tabindex="-1" role="dialog" aria-labelledby="modalUserLabel"
+            aria-hidden="true">
+            <div class="modal-dialog dialogCambiarPass mt-xl-5">
+                <section class="modal-content content-CambiarContra">
+                    <p class="tituloRestablecerContraseña text-center">Recuperacion
+                        de contraseña</p>
+                    <p class="InfoCambiarPass infoCambiarPass0">Ingresa tu
+                        usuario te enviaremos la información de
+                        reestablecimiento de contraseña a tu correo electronico.</p>
+
+                    <section id="sectionPasswordR" class="row contForm">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
+                            col-xs-12">
+                            <img
+                                src="../Multimedia/asignar.png"
+                                height="50px;"
+                                style="margin-right: 10px;margin-top: 10px; margin-left: 42%;" />
+                            <div class="form-group">
+                                <label class="labelNameInput" for="forgetUser">Usuario</label>
+                                <input placeholder type="text"
+                                    class="form-control" id="forgetUser"
+                                    name="forgetUser" />
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12
+                            col-xs-12 justify-content-center d-flex">
+                            <button type="button" class="buttonBtn btnPrimary
+                                btnCambiarpass" id="btnRecuperar">Recuperar</button>
+                        </div>
+                    </section>
 
                 </section>
             </div>
         </div>
         <div id="contFooter">
             <div class="contInfoFooter">
-                <p class="pInfoFooter">Aplicaciones Empresariales</p>
-                <p class="pInfoFooter">DOCUTECH</p>
+                <p class="pInfoFooter">Unidades tecnologicas de santander</p>
+                <p class="pInfoFooter">Parqueaderos</p>
                 <p class="pInfoFooter">Bucaramanga - Colombia</p>
             </div>
         </div>
