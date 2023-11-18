@@ -132,7 +132,7 @@ function CargarTablaServicios(tableData) {
     drawCallback: function (settings) {
       $("#spinner").hide();
     },
-    order: [[0, "asc"]],
+    order: [[0, "desc"]],
   });
 }
 

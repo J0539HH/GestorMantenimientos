@@ -45,6 +45,14 @@ function verificarSesion() {
   fetch("/api/sesion")
     .then((response) => response.json())
     .then((data) => {
+      if (urlActual === "GestorUsuarios.html") {
+        if (data.idrol === 1) {
+          console.log("El ID es válido.");
+        } else {
+          window.location.href = "../../acceso/Login.html";
+        }
+      }
+      console.log("Ubicación actual:", window.location.href);
       const idusuario = data.idusuario;
       idrol = data.idrol;
       idUsuario = data.idusuario;

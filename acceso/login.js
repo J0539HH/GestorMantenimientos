@@ -7,8 +7,8 @@ $(document).ready(function () {
     var tecla = event.keyCode
       ? event.keyCode
       : event.which
-      ? event.which
-      : event.charCode;
+        ? event.which
+        : event.charCode;
     if (tecla === 13) {
       setTimeout(function () {
         verificarLogin();
@@ -56,8 +56,8 @@ $(document).ready(function () {
     var tecla = event.keyCode
       ? event.keyCode
       : event.which
-      ? event.which
-      : event.charCode;
+        ? event.which
+        : event.charCode;
     if (tecla === 13) {
       setTimeout(function () {
         verificarLogin();
@@ -404,6 +404,8 @@ function RegistrarAuditoria(idusuario) {
     .then((result) => {
       $("#spinner").hide();
       AlertCorrecta("Bienvenido al sistema!");
+      document.cookie =
+        "mostradoModal=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       setTimeout(function () {
         window.location.href = "/modulos/tareasmenu/menu.html";
       }, 1500);
@@ -444,6 +446,7 @@ function IniciarSession(idusuario, idrol, nombre) {
     },
   });
   RegistrarAuditoria(idusuario);
+
 }
 
 function spinner(texto) {
