@@ -45,6 +45,7 @@ function verificarSesion() {
   fetch("/api/sesion")
     .then((response) => response.json())
     .then((data) => {
+      var urlActual = window.location.href.split("/").pop();
       if (urlActual === "GestorUsuarios.html") {
         if (data.idrol === 1) {
           console.log("El ID es válido.");
